@@ -9,7 +9,7 @@ const DisplayTodo = (props) => {
     return (
         <div>
             <div>
-                ---------------List todo:---------------
+                ----------------List todo:---------------
             </div>
             {listTodo.map((item, index) => {
                 return (
