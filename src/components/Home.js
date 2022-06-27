@@ -31,9 +31,7 @@ const Home = () => {
         // setListTodo(currenTodoList)
         let currenTodoList = listTodo.filter(item => item.id !== id)
         setListTodo(currenTodoList)
-
     }
-
     return (
         <div>
             <AddTodo
@@ -41,12 +39,10 @@ const Home = () => {
                 setTodo={setTodo}
                 handleClick={handleClick}
             />
-
             <DisplayTodo
                 childData={listTodo}
                 handleDeleteTodo={handleDeleteTodo}
             />
-
         </div>
     )
 }
