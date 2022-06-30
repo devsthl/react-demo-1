@@ -6,7 +6,7 @@ const AddTodo = (props) => {
             <input value={todo} type='text' onChange={(event) => setTodo(event.target.value)} />
             <button type='button' onClick={() => { handleClick() }}>Submit</button>
             <br />
-            <br />
+            <br /> 
         </div>
     )
 }

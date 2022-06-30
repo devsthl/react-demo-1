@@ -3,19 +3,20 @@
     padding: 40px;
     background-color: #282c34;
     font-size: 14px;
-    height: calc(100vh - 80px);
+    height: 100%;
     display: flex;
 
     .content-left {
-        width: 50%;
+        width: 20%;
         padding: 10px;
-        border-right: 1px solid white;
+    
     }
 
     .content-right {
-        width: 50%;
+        width: 80%;
         padding: 10px;
         color: white;
+
     }
 }
 
@@ -75,4 +76,8 @@
 
 button {
     cursor: pointer;
+}
+
+span {
+    color: red
 }

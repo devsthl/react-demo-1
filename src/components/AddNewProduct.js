@@ -6,16 +6,35 @@ const AddNewProduct = () => {
     const [size, setSize] = useState(0);
     const [color, setColor] = useState('');
 
-    const [isShowDetail, setisShowDetail] = useState(true);
+    const [isShowDetail, setisShowDetail] = useState(false);
     const handleClickBtn = () => {
         let object = {
-            name, price, size, color
+            name: name,
+            price: price,
+            size: size,
+            color: color
         }
-        console.log(">>> check data: ", object)
+
+        let productList = localStorage.getItem("productList");
+
+        if (productList) {
+            let arr = JSON.parse(productList)
+            console.log(">>> check productList: ", productList)
+            arr.push(object);
+            localStorage.setItem("productList", JSON.stringify(arr))
+        } else {
+            localStorage.setItem("productList", JSON.stringify([object]))
+        }
+
+        setName("");
+        setPrice(0);
+        setSize(0);
+        setColor("")
     }
     const handleisShowDetail = () => {
         setisShowDetail(!isShowDetail);
     }
+
     return (
 
         <div>
@@ -46,10 +65,16 @@ const AddNewProduct = () => {
                         <div>
                             <button onClick={() => handleClickBtn()}>Add New</button>
                         </div>
+
                     </fieldset> : null
             }
+            <div>
+                List Products:
+                <div>
+                    {localStorage.getItem("productList")}
+                </div>
+            </div>
         </div>
-
     )
 }
 export default AddNewProduct;
