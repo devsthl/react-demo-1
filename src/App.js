@@ -11,6 +11,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Weather from './components/Weather/Weather';
+import GenerateOTP from './components/OTP/GenerateOTP';
+import OTP from './components/OTP/OTP';
+import WeatherByLocation from './components/Weather/WeatherByLocation';
 
 function App() {
   return (
@@ -20,8 +24,11 @@ function App() {
         <Route path="/product">
           <Product />
         </Route>
-        <Route path="/weather">
-          <div>WeatherApp</div>
+        <Route path="/otp">
+          <OTP />
+        </Route>
+        <Route path="/weather" exact>
+          <Weather />
         </Route>
         <Route path="/about">
           <div>about</div>
@@ -46,6 +53,9 @@ function App() {
               <Product />
             </div>
           </div>
+        </Route>
+        <Route path="/weather/detail/:woeid">
+          <WeatherByLocation />
         </Route>
         <Route path="*">
           <div>404 Not Found</div>

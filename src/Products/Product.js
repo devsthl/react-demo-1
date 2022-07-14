@@ -6,15 +6,15 @@ import snicker4 from "../assets/images/snicker-4.jpg";
 import Lightbox from 'react-image-lightbox';
 import { useState } from 'react';
 
-
+const images = [
+    snicker1,
+    snicker2,
+    snicker3,
+    snicker4
+];
 const Product = () => {
 
-    const images = [
-        snicker1,
-        snicker2,
-        snicker3,
-        snicker4
-    ];
+
 
     const [currentUpImg, setcurrentUpImg] = useState(snicker1);
     const [isOpen, setIsOpen] = useState(false);

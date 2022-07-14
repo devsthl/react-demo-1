@@ -1,0 +1,55 @@
+.otp-parent-container{
+    max-width: 70vw;
+    padding: 15px;
+    margin: 0 auto;
+
+    .input-otp-container{
+        border: 1px solid gray;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        
+        .title{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .input-style-otp{
+            width: 3rem !important;
+            height: 3rem;
+            margin: 0 1rem;
+            font-size: 2rem;
+            border-radius: 4px;
+            border: 1px solid black; 
+            outline: none;           
+        }
+        .action{
+            button{
+                height: 33px;
+                width: 48;
+                margin: 0 20px ;
+                color: white;
+                background-color: #04AA6D;
+                border: 1px;
+                border-radius: 3px;
+            }
+        }
+    }
+    .generate-otp-container{
+        text-align: center;
+        margin: 20px 0;
+        button{
+            height: 28px;
+        }
+        .title{
+            padding-top: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
